@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Material Notes</string>
+    <string name="action_settings">Settings</string>
+    <string name="infront">In Front</string>
+    <string name="nonotes">No notes!</string>
+    <string name="titlehint">Title (if blank first word from note will be used)</string>
+</resources>

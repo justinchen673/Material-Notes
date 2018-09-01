@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">#2196f3</item>
+        <item name="android:colorPrimaryDark">#1976d2</item>
+        <item name="android:colorAccent">#64b5f6</item>
+        <item name="android:colorControlHighlight">#64b5f6</item>
+    </style>
+
+    <style name="FloatingActionButton" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/fab_background</item>
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item></style>
+
+    <style name="FloatingActionButton.Mini">
+        <item name="android:background">@drawable/fabmini_background</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="FloatingActionButtonDelete" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/fabmini_background</item>
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item></style>
+
+</resources>

@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity"
+    android:background="#37474f">
+
+    <ListView
+        android:id="@+id/list"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </ListView>
+
+    <TextView
+        android:id="@+id/noNotesTv"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:hint="@string/nonotes"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/viewLayout"
+        android:background="#b0bec5"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:id="@+id/viewTitle2"
+            android:textSize="28sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/viewNote2"
+            android:textSize="28sp"
+            android:layout_width="fill_parent"
+            android:background="#00000000"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editlayout"
+        android:background="#b0bec5"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:textSize="28sp"
+            android:id="@+id/title"
+            android:hint="@string/titlehint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:textSize="28sp"
+            android:hint="Write your note here"
+            android:id="@+id/noteEdit"
+            android:background="#00000000"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fab_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false" >
+
+
+
+        <ImageButton
+            android:id="@+id/fab_action_1"
+            style="@style/FloatingActionButton.Mini"
+            android:src="@drawable/donewhite"
+            android:layout_margin="22dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@null"
+            />
+
+        <ImageButton
+            android:src="@drawable/deletewhite"
+            android:scaleType="centerCrop"
+            android:id="@+id/deleteFab"
+            style="@style/FloatingActionButtonDelete"
+            android:layout_margin="16dp"
+            android:contentDescription="@null"
+            android:layout_gravity="bottom|end"
+            />
+
+        <ImageButton
+            android:id="@+id/fab"
+            style="@style/FloatingActionButton"
+            android:src="@drawable/plus"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:contentDescription="@null"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
