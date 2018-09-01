@@ -52,20 +52,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
 
         prefs = new SharedPrefs();
-        fab = (ImageButton) findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(this);
         fabAction1 = findViewById(R.id.fab_action_1);
         fabAction1.setOnClickListener(this);
-        deleteFab = (ImageButton) findViewById(R.id.deleteFab);
+        deleteFab = findViewById(R.id.deleteFab);
         deleteFab.setOnClickListener(this);
-        noNotesTv = (TextView) findViewById(R.id.noNotesTv);
-        list = (ListView) findViewById(R.id.list);
-        editText = (EditText) findViewById(R.id.noteEdit);
-        title = (EditText) findViewById(R.id.title);
-        viewTitle = (EditText) findViewById(R.id.viewTitle2);
-        viewNote = (EditText) findViewById(R.id.viewNote2);
+        noNotesTv = findViewById(R.id.noNotesTv);
+        list = findViewById(R.id.list);
+        editText = findViewById(R.id.noteEdit);
+        title = findViewById(R.id.title);
+        viewTitle = findViewById(R.id.viewTitle2);
+        viewNote = findViewById(R.id.viewNote2);
 
-        final ViewGroup fabContainer = (ViewGroup) findViewById(R.id.fab_container);
+        final ViewGroup fabContainer = findViewById(R.id.fab_container);
         fabContainer.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
             public boolean onPreDraw() {
@@ -276,27 +276,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 newArray = oldSet.toArray(new String[oldSet.size()]);
                 newArray[itemPosition] = wroteText;
             }
-            /*
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-                            WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
 
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-                WHY THE FUCK IS THIS LINE REVERSING MY ARRAY ORDER
-
-             */
             Set<String> newSet = new HashSet<>(Arrays.asList(newArray));
             prefs.storeSet(getApplicationContext(), "notes", newSet);
             hideAnimation(myView, cx, cy, finalRadius);
@@ -374,22 +354,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Animator createExpandYAnimator(View view, float offset) {
         return ObjectAnimator.ofFloat(view, TRANSLATION_Y, (offset * -2), 0).setDuration(getResources().getInteger(android.R.integer.config_mediumAnimTime));
     }
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_floating_action_button, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    */
+    
     private void listSetOnClickListener() {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
